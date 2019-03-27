@@ -1,4 +1,4 @@
-package com.gabara.complaintservices.complaint;
+package com.gabara.complaintservices.controllers;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -24,7 +24,7 @@ public class ComplaintControllerTest {
 
     @Test
     public void getComplaint() throws Exception {
-        mvc.perform(MockMvcRequestBuilders.get("/complaint").accept(MediaType.APPLICATION_JSON))
+        mvc.perform(MockMvcRequestBuilders.get("/controllers").accept(MediaType.APPLICATION_JSON))
             .andExpect(status().isOk())
             .andExpect(content().string(equalTo("Greetings from Spring Boot!")));
     }
